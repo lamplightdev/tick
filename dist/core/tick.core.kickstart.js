@@ -2,7 +2,7 @@
 
 /*
  * @pqina/tick v1.8.3 - Counters Made Easy
- * Copyright (c) 2024 PQINA - https://github.com/pqina/tick/
+ * Copyright (c) 2025 PQINA - https://github.com/pqina/tick/
  */
 (function(root, plugins, undefined) {
 	'use strict';
@@ -2376,7 +2376,8 @@ var definitionOutline = {
 	style: null,
 	repeat: null,
 	children: null,
-	className: null
+	className: null,
+	valueMapping: null
 };
 
 var toPresenterDefinitionTree = function toPresenterDefinitionTree(nodes) {

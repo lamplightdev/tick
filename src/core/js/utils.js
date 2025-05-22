@@ -58,7 +58,8 @@ const definitionOutline = {
 	style:null,
 	repeat:null,
 	children:null,
-	className:null
+	className:null,
+	valueMapping:null
 };
 
 export const toPresenterDefinitionTree = (nodes) =>
