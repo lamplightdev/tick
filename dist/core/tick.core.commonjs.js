@@ -2446,6 +2446,10 @@ var createDOMTreeForDefinition = function createDOMTreeForDefinition(definition)
 				def.root.dataset.layout = def.layout;
 			}
 
+			if (def.valueMapping) {
+				def.root.dataset.valueMapping = def.valueMapping;
+			}
+
 			if (def.repeat) {
 				def.root.dataset.repeat = true;
 				def.repeat = createDOMTreeForDefinition(def.children).pop();
