@@ -3399,7 +3399,6 @@ var setTimer = function setTimer(cb) {
 
         // stop here if document is hidden at start time
         if (isDocumentHidden()) {
-            didHideDocument();
             return;
         }
 
@@ -3484,16 +3483,11 @@ var setTimer = function setTimer(cb) {
     /**
      * Document Visibility Change
      */
-    var didHideDocument = function didHideDocument() {
-        // can only be called if the timer is currently running so no checks
-        sleep();
-    };
-
     var didShowDocument = function didShowDocument() {
         // can only be called if the timer was running before (but could have been stopped in the mean time)
         if (!isStarted()) return;
 
-        wake();
+        // wake();
     };
 
     var stopListeningForVisibilityChanges = function stopListeningForVisibilityChanges() {
@@ -3506,7 +3500,7 @@ var setTimer = function setTimer(cb) {
 
     var handleVisibilityChange = function handleVisibilityChange() {
         if (isDocumentHidden()) {
-            didHideDocument();
+            
         } else {
             didShowDocument();
         }

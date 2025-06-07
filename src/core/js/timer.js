@@ -161,14 +161,14 @@ export const setTimer = (cb, interval = 1000, options = {}) => {
      */
     const didHideDocument = () => {
         // can only be called if the timer is currently running so no checks
-        sleep();
+        // sleep();
     };
 
     const didShowDocument = () => {
         // can only be called if the timer was running before (but could have been stopped in the mean time)
         if (!isStarted()) return;
 
-        wake();
+        // wake();
     };
 
     const stopListeningForVisibilityChanges = () => {
